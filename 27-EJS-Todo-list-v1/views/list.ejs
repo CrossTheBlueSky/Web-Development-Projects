@@ -1,0 +1,35 @@
+<%- include("header") -%>
+
+    <body>
+        <div class="box" id="heading">
+            <h1>
+                <%=listTitle%> To Do List</h1>
+        </div>
+
+        <div class="box">
+            <% newListItems.forEach((element) => { %>
+                <div class="item">
+                    <input type="checkbox">
+                    <p>
+                        <%=element%>
+                    </p>
+                </div>
+
+                <%  })%>
+
+                    <form action="/" method="post" class="item">
+                        <input type="text" name="newToDo" placeholder="New Item">
+                        <button type="submit" name="list" value=<%=listTitle%>>+</button>
+                    </form>
+
+        </div>
+
+
+
+
+    </body>
+
+
+    <%- include("footer") -%>
+
+        </html>
